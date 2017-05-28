@@ -1,3 +1,5 @@
+package com.suoqin
+
 fun main(args: Array<String>) {
     println("Hello, world!")
     val john = Person("John", 15, null)
@@ -10,17 +12,18 @@ fun main(args: Array<String>) {
 
     println("double sum 3, 4 = " + double(3, 4, sum))
 
-    map()
+    intMapping()
 
     range()
 
 }
 
-private fun map() {
+fun intMapping(): List<Int> {
     val numbers = arrayOf(1, 2, 3, 4, 5)
 
     val squareNumbers = numbers.map({ x -> x * x })
     println("squareNumbers are " + squareNumbers)
+    return squareNumbers
 }
 
 private fun range() {
