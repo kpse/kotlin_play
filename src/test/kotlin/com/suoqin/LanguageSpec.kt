@@ -53,5 +53,12 @@ object LanguageSpec : Spek({
                 assertEquals("hello", listOf("hello", "world").first())
             }
         }
+
+        on("sort") {
+            it("should be fun") {
+                assertEquals(listOf(4,3,2,1), (1..4).sortedBy({ -it }))
+                assertEquals((1..4).toList(), listOf(4,2,1,3).sortedBy({ it }))
+            }
+        }
     }
 })
